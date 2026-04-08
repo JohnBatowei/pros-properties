@@ -34,7 +34,7 @@ const AboutPage = () => {
           <div className="container-max px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <span className="text-gold font-semibold text-sm uppercase tracking-widest">Who We Are</span>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4">
-              About Pros Properties
+              About Pros-Properties
             </h1>
             <p className="text-primary-foreground/70 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
               Nigeria's premier collective real estate investment platform — building wealth, transforming communities, and delivering consistent returns since 2018.

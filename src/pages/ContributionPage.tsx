@@ -44,7 +44,11 @@ const securityFeatures = [
 ];
 
 const timelinePhases = [
+<<<<<<< HEAD
   { year: 'Step 1', title: 'Choose Your Plan', desc: 'Select a contribution plan that fits your budget, starting from as low as ₦25,000/month.' },
+=======
+  { year: 'Step 1', title: 'Choose Your Plan', desc: 'Select a contribution plan that fits your budget — starting from as low as ₦25,000/month.' },
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
   { year: 'Step 2', title: 'Make Consistent Payments', desc: 'Contribute monthly toward your chosen property. Every payment brings you closer to ownership.' },
   { year: 'Step 3', title: 'Property Allocation', desc: 'Once your payments are complete, your plot is officially allocated with full legal documentation.' },
   { year: 'Step 4', title: 'Build or Hold', desc: 'Develop your property or hold it for appreciation. Either way, you own a tangible, valuable asset.' },

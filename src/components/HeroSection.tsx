@@ -1,5 +1,8 @@
 import { ArrowRight, Play, ChevronDown } from 'lucide-react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
 import heroImage from '@/assets/hero-estate.jpg';
 
 const HeroSection = () => {
@@ -8,10 +11,18 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+<<<<<<< HEAD
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Premium property investment opportunities across Nigeria"
+=======
+      {/* Background */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Luxury estate development in Abuja"
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
           className="w-full h-full object-cover scale-105 animate-[slowZoom_20s_ease-in-out_infinite_alternate]"
           width={1920}
           height={1080}
@@ -20,26 +31,46 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-secondary/40" />
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Decorative elements */}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
       <div className="absolute top-20 right-10 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
       <div className="absolute bottom-32 right-1/4 w-48 h-48 bg-gold/10 rounded-full blur-2xl animate-float" />
 
       <div className="relative z-10 container-max px-4 sm:px-6 lg:px-8 pt-28 pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD
           <div>
       
+=======
+          {/* Left Content */}
+          <div>
+            {/* <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 mb-8 animate-fade-up backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+              <span className="text-gold text-sm font-medium tracking-wide">Trusted by 500+ Investors Across Nigeria</span>
+            </div> */}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
 
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[1.08] mb-8 animate-fade-up animate-fade-up-delay-1">
               <span className="text-primary-foreground">Build Wealth</span>
               <br />
               <span className="text-primary-foreground">Through </span>
+<<<<<<< HEAD
               <span className="text-gradient-gold">Structured</span>
               <br />
               <span className="text-gradient-gold">Property</span>
+=======
+              <span className="text-gradient-gold">Disciplined</span>
+              <br />
+              <span className="text-gradient-gold">Real Estate</span>
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
               <br />
               <span className="text-primary-foreground">Investment</span>
             </h1>
 
             <p className="text-primary-foreground/70 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed animate-fade-up animate-fade-up-delay-2">
+<<<<<<< HEAD
               Join a structured investment system designed to help everyday earners 
               own property over time through disciplined monthly contributions 
               and collective wealth building.
@@ -55,10 +86,28 @@ const HeroSection = () => {
                   <Play size={18} className="text-gold ml-0.5" />
                 </span>
                 <span className="font-medium">Watch How It Works</span>
+=======
+              A structured property investment and land banking community designed 
+              for sustainable, long-term growth — bridging everyday earners to 
+              generational wealth.
+            </p>
+
+            <div className="flex flex-wrap gap-4 animate-fade-up animate-fade-up-delay-3">
+              <button onClick={() => scrollTo('#inspection')} className="btn-gold flex items-center gap-2 text-base group">
+                Book Inspection
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button onClick={() => scrollTo('#video')} className="flex items-center gap-3 px-6 py-4 rounded-xl text-primary-foreground/80 hover:text-gold transition-colors group">
+                <span className="w-12 h-12 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center group-hover:bg-gold/30 transition-colors">
+                  <Play size={18} className="text-gold ml-0.5" />
+                </span>
+                <span className="font-medium">Watch Our Story</span>
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
               </button>
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="hidden lg:flex flex-col gap-6 animate-fade-up animate-fade-up-delay-4">
                   <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 mb-8 animate-fade-up backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
@@ -69,6 +118,15 @@ const HeroSection = () => {
               { value: '15+', label: 'Projects Delivered', sub: 'Through partner companies' },
               { value: '₦2B+', label: 'Assets Managed', sub: 'And counting' },
             ].map((stat) => (
+=======
+          {/* Right Stats Panel */}
+          <div className="hidden lg:flex flex-col gap-6 animate-fade-up animate-fade-up-delay-4">
+            {[
+              { value: '500+', label: 'Active Investors', sub: 'Growing community' },
+              { value: '15+', label: 'Estates Delivered', sub: 'Across FCT & beyond' },
+              { value: '₦2B+', label: 'Assets Managed', sub: 'And counting' },
+            ].map((stat, i) => (
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
               <div
                 key={stat.label}
                 className="group p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 backdrop-blur-sm hover:bg-primary-foreground/10 hover:border-gold/20 transition-all duration-500"
@@ -85,10 +143,18 @@ const HeroSection = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="lg:hidden mt-12 flex gap-6 justify-center animate-fade-up animate-fade-up-delay-4">
           {[
             { value: '500+', label: 'Investors' },
             { value: '15+', label: 'Projects' },
+=======
+        {/* Mobile Stats */}
+        <div className="lg:hidden mt-12 flex gap-6 justify-center animate-fade-up animate-fade-up-delay-4">
+          {[
+            { value: '500+', label: 'Investors' },
+            { value: '15+', label: 'Estates' },
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
             { value: '₦2B+', label: 'Managed' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
@@ -99,8 +165,14 @@ const HeroSection = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <button
         onClick={() => scrollTo('#partners')}
+=======
+      {/* Scroll indicator */}
+      <button
+        onClick={() => scrollTo('#video')}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/40 hover:text-gold transition-colors cursor-pointer"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>

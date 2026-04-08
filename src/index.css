@@ -182,8 +182,11 @@
   0% { transform: scale(1); }
   100% { transform: scale(1.08); }
 }
+<<<<<<< HEAD
 
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+=======
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec

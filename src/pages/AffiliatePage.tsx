@@ -11,7 +11,11 @@ import { toast } from 'sonner';
 const benefits = [
   { icon: Wallet, title: 'Attractive Commissions', desc: 'Earn competitive commissions on every successful referral. The more you refer, the more you earn.' },
   { icon: TrendingUp, title: 'Passive Income', desc: 'Build a sustainable income stream by connecting people with premium real estate opportunities.' },
+<<<<<<< HEAD
   { icon: Users, title: 'Growing Network', desc: 'Join 100+ active affiliates already earning with Pros-Properties across Nigeria.' },
+=======
+  { icon: Users, title: 'Growing Network', desc: 'Join 100+ active affiliates already earning with Pros Properties across Nigeria.' },
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
   { icon: Star, title: 'Full Support', desc: 'Get marketing materials, training, and dedicated support to help you succeed.' },
 ];
 
@@ -58,7 +62,11 @@ const AffiliatePage = () => {
               <span className="text-gold text-sm font-medium">Earn With Us</span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mt-4">
+<<<<<<< HEAD
               Become a <span className="text-gradient-gold">Pros-Properties</span> Affiliate
+=======
+              Become a <span className="text-gradient-gold">Pros Properties</span> Affiliate
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
             </h1>
             <p className="text-primary-foreground/70 text-lg mt-6 max-w-2xl mx-auto">
               Join our affiliate program and earn attractive commissions by connecting investors with premium real estate opportunities in Abuja.
@@ -119,7 +127,11 @@ const AffiliatePage = () => {
                   Start Earning <span className="text-gradient-gold">Today</span>
                 </h2>
                 <p className="text-primary-foreground/70 text-lg mt-6 leading-relaxed">
+<<<<<<< HEAD
                   Fill out the form and our team will get in touch within 24 hours. No capital needed just your network and influence.
+=======
+                  Fill out the form and our team will get in touch within 24 hours. No capital needed — just your network and influence.
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
                 </p>
                 <div className="mt-8 space-y-3">
                   {['Zero capital required', 'Marketing materials provided', 'Dedicated affiliate manager', 'Weekly commission payouts'].map((item) => (

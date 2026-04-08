@@ -8,30 +8,52 @@ import project2 from '@/assets/project-2.jpg';
 const projects = [
   {
     name: 'Kuje Premium Gardens Phase 1',
+<<<<<<< HEAD
     description: 'Delivered through our partner companies fully developed with 100+ plots, paved roads, drainage, and electricity.',
     image: project1,
     highlights: ['100+ Plots Delivered', 'Full Infrastructure', '200% ROI Achieved'],
+=======
+    description: 'Fully developed with 100+ plots, paved roads, drainage, and electricity. All plots sold and titles delivered.',
+    image: project1,
+    highlights: ['100+ Plots Sold', 'Full Infrastructure', '200% ROI Achieved'],
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
     status: 'Completed',
   },
   {
     name: 'Wumba Residential Phase 1',
+<<<<<<< HEAD
     description: 'Successfully completed through partnered real estate developers. Modern homes with full documentation delivered to investors.',
+=======
+    description: 'Successfully completed estate with modern homes and full documentation. A landmark achievement for our investors.',
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
     image: project2,
     highlights: ['50+ Houses Built', 'C of O Secured', 'All Investors Paid'],
     status: 'Completed',
   },
   {
     name: 'Kuje Premium Gardens Phase 2',
+<<<<<<< HEAD
     description: 'Expanding through our partner network with additional plots and enhanced infrastructure for new investment groups.',
     image: project1,
     highlights: ['200+ Plots', 'Gated Community', 'Partner Delivered'],
+=======
+    description: 'Expanding on the success of Phase 1 with additional plots and enhanced infrastructure for new investors.',
+    image: project1,
+    highlights: ['200+ Plots', 'Gated Community', 'Phase 1 ROI Replicated'],
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
     status: 'In Progress',
   },
   {
     name: 'Wumba Residential Phase 2',
+<<<<<<< HEAD
     description: 'Continuing our success story through verified partner companies, offering structured investment in modern housing.',
     image: project2,
     highlights: ['Modern Designs', 'Title Secured', 'Investor Returns'],
+=======
+    description: 'A continuation of our Wumba success story, offering modern housing and secure investment returns.',
+    image: project2,
+    highlights: ['Modern Designs', 'Title Secured', 'Investor Satisfaction'],
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
     status: 'Coming Soon',
   },
 ];
@@ -39,13 +61,26 @@ const projects = [
 const ProjectsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [current, setCurrent] = useState(0);
+<<<<<<< HEAD
   const prev = () => setCurrent((c) => (c === 0 ? projects.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === projects.length - 1 ? 0 : c + 1));
+=======
+
+  const prev = () => setCurrent((c) => (c === 0 ? projects.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === projects.length - 1 ? 0 : c + 1));
+
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
   const p = projects[current];
 
   return (
     <section className="section-padding bg-surface relative overflow-hidden" ref={ref}>
+<<<<<<< HEAD
       <div className="absolute top-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+=======
+      {/* Decorative */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
 
       <div className="container-max relative z-10">
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -56,16 +91,38 @@ const ProjectsSection = () => {
             Projects We've Delivered
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+<<<<<<< HEAD
             Delivered through our partnered real estate companies, every project represents trust, growth, and shared prosperity.
+=======
+            Every project tells a story of trust, growth, and shared prosperity.
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
           </p>
         </div>
 
         <div className={`relative max-w-5xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+<<<<<<< HEAD
           <div className="rounded-3xl overflow-hidden border border-border/50 bg-background shadow-xl">
             <div className="md:flex">
               <div className="md:w-1/2 relative aspect-video md:aspect-auto overflow-hidden">
                 <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" width={800} height={600} />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+=======
+          {/* Main Card */}
+          <div className="rounded-3xl overflow-hidden border border-border/50 bg-background shadow-xl">
+            <div className="md:flex">
+              {/* Image Side */}
+              <div className="md:w-1/2 relative aspect-video md:aspect-auto overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+                {/* Status Badge */}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
                 <span className={`absolute top-4 left-4 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md ${
                   p.status === 'Completed' ? 'bg-green-deep/80 text-primary-foreground' :
                   p.status === 'In Progress' ? 'bg-gold/80 text-foreground' :
@@ -73,12 +130,20 @@ const ProjectsSection = () => {
                 }`}>
                   {p.status}
                 </span>
+<<<<<<< HEAD
+=======
+                {/* Counter */}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
                 <div className="absolute bottom-4 left-4 text-primary-foreground">
                   <span className="font-display text-4xl font-bold">{String(current + 1).padStart(2, '0')}</span>
                   <span className="text-primary-foreground/50 text-lg ml-1">/ {String(projects.length).padStart(2, '0')}</span>
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+              {/* Content Side */}
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
               <div className="md:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
                 <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground leading-tight">{p.name}</h3>
                 <p className="text-muted-foreground mt-4 leading-relaxed">{p.description}</p>
@@ -90,6 +155,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <div className="flex items-center gap-3 mt-8 pt-6 border-t border-border/50">
                   <button onClick={prev} className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-gold/10 hover:border-gold/30 hover:text-gold transition-all" aria-label="Previous project">
                     <ChevronLeft size={20} />
@@ -100,6 +166,34 @@ const ProjectsSection = () => {
                   <div className="flex gap-2 ml-auto">
                     {projects.map((_, i) => (
                       <button key={i} onClick={() => setCurrent(i)} className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-gold w-8' : 'bg-border w-2 hover:bg-muted-foreground/40'}`} aria-label={`Go to project ${i + 1}`} />
+=======
+                {/* Navigation */}
+                <div className="flex items-center gap-3 mt-8 pt-6 border-t border-border/50">
+                  <button
+                    onClick={prev}
+                    className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-gold/10 hover:border-gold/30 hover:text-gold transition-all"
+                    aria-label="Previous project"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button
+                    onClick={next}
+                    className="w-11 h-11 rounded-full border border-border flex items-center justify-center text-foreground hover:bg-gold/10 hover:border-gold/30 hover:text-gold transition-all"
+                    aria-label="Next project"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+
+                  {/* Dots */}
+                  <div className="flex gap-2 ml-auto">
+                    {projects.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setCurrent(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${i === current ? 'bg-gold w-8' : 'bg-border w-2 hover:bg-muted-foreground/40'}`}
+                        aria-label={`Go to project ${i + 1}`}
+                      />
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
                     ))}
                   </div>
                 </div>
@@ -108,8 +202,17 @@ const ProjectsSection = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="text-center mt-14">
           <Link to="/portfolio" className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border-2 border-gold/30 px-10 py-4 font-display font-bold text-lg transition-all duration-300 hover:border-gold hover:shadow-lg hover:shadow-gold/10">
+=======
+        {/* View More */}
+        <div className="text-center mt-14">
+          <Link
+            to="/portfolio"
+            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border-2 border-gold/30 px-10 py-4 font-display font-bold text-lg transition-all duration-300 hover:border-gold hover:shadow-lg hover:shadow-gold/10"
+          >
+>>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
             <span className="absolute inset-0 gold-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <span className="relative text-foreground group-hover:text-foreground transition-colors">Explore Full Portfolio</span>
             <ArrowRight size={20} className="relative group-hover:translate-x-1 transition-transform text-gold" />
