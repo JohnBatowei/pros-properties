@@ -32,7 +32,7 @@ const EstatesPage = () => {
               All <span className="text-gradient-gold">Estates</span>
             </h1>
             <p className="text-primary-foreground/70 text-lg mt-4 max-w-2xl mx-auto">
-              Browse our complete portfolio of investment properties across Abuja.
+              Browse our complete portfolio of investment properties across Nigeria.
             </p>
           </div>
         </section>

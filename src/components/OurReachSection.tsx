@@ -19,10 +19,10 @@ const OurReachSection = () => {
             <span className="text-gold text-sm font-medium">Our Reach</span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-            From Nigeria to the <span className="text-gradient-gold">World</span>
+            From Nigeria and <span className="text-gradient-gold">Beyond</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-            Building a global community of property investors and partnering with trusted companies nationwide and also expanding internationally.
+            Building a global community of property investors. partnering with trusted companies nationwide and expanding internationally.
           </p>
         </div>
 

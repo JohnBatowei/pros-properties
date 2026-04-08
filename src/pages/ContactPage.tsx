@@ -13,11 +13,7 @@ const contactInfo = [
   { icon: Mail, label: 'Investment Enquiries', value: 'invest@pros-properties.com' },
   { icon: Mail, label: 'General Enquiry', value: 'info@pros-properties.com' },
   { icon: Mail, label: 'Finance', value: 'finance@pros-properties.com' },
-<<<<<<< HEAD
-  { icon: Phone, label: 'Phone', value: '+234 705 496 2230' },
-=======
   { icon: Phone, label: 'Phone', value: '+234 816 022 8215' },
->>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
   { icon: Clock, label: 'Working Hours', value: 'Monday – Saturday, 9AM – 5PM' },
 ];
 
@@ -72,11 +68,7 @@ const ContactPage = () => {
                   {[
                     { label: 'Full Name *', key: 'name', type: 'text', placeholder: 'Your name' },
                     { label: 'Email Address *', key: 'email', type: 'email', placeholder: 'you@email.com' },
-<<<<<<< HEAD
-                    { label: 'Phone Number', key: 'phone', type: 'tel', placeholder: '+234 705 496 2230' },
-=======
                     { label: 'Phone Number', key: 'phone', type: 'tel', placeholder: '+234 816 022 8215' },
->>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
                   ].map((field) => (
                     <div key={field.key}>
                       <label className="block text-foreground text-sm font-medium mb-2">{field.label}</label>

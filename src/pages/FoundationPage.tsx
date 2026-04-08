@@ -4,16 +4,12 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import { Heart, Globe, Users, Sprout, Shield, HandHeart } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { getWhatsAppLink } from '@/lib/emailjs';
 
 const pillars = [
   { icon: Heart, title: 'Shared Prosperity', desc: 'Every member benefits proportionally from collective investments, ensuring wealth is distributed fairly across the community.' },
-<<<<<<< HEAD
   { icon: Globe, title: 'Sustainable Wealth', desc: 'We focus on long-term, disciplined real estate investment that builds generational wealth and not quick schemes.' },
-  { icon: Users, title: 'Community First', desc: 'Our foundation is built on collective action everyday earners pooling resources to access opportunities once reserved for the wealthy.' },
-=======
-  { icon: Globe, title: 'Sustainable Wealth', desc: 'We focus on long-term, disciplined real estate investment that builds generational wealth — not quick schemes.' },
-  { icon: Users, title: 'Community First', desc: 'Our foundation is built on collective action — everyday earners pooling resources to access opportunities once reserved for the wealthy.' },
->>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
+  { icon: Users, title: 'Community First', desc: 'Our foundation is built on collective action. Everyday earners pooling resources to access opportunities once reserved for the wealthy.' },
   { icon: Sprout, title: 'Growth Through Discipline', desc: 'Consistent contributions, patient holding periods, and strategic acquisitions compound into significant returns over time.' },
   { icon: Shield, title: 'Integrity & Transparency', desc: 'Bi-annual reporting, legal compliance, and full documentation ensure every investor has complete visibility.' },
   { icon: HandHeart, title: 'Empowerment', desc: 'We bridge the gap between aspiration and achievement, enabling income earners to become property owners and wealth builders.' },
@@ -53,11 +49,7 @@ const FoundationPage = () => {
               <p className="text-muted-foreground text-lg mt-4 leading-relaxed">
                 Pros-Properties Limited was founded on the belief that property ownership and wealth creation 
                 should not be exclusive to the privileged few. Through our structured investment model, we empower 
-<<<<<<< HEAD
-                ordinary Nigerians to build extraordinary wealth at just one disciplined contribution at a time.
-=======
-                ordinary Nigerians to build extraordinary wealth — one disciplined contribution at a time.
->>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
+                ordinary Nigerians to build extraordinary wealth at one disciplined contribution at a time.
               </p>
             </div>
 
@@ -92,8 +84,12 @@ const FoundationPage = () => {
               Start your journey toward sustainable wealth creation today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <a href="/#inspection" className="btn-gold">Book Inspection</a>
-              <a href="/#estates" className="btn-outline-gold">Explore Estates</a>
+              <a href={getWhatsAppLink("Hello, I'm interested in starting a property investment plan")} className="btn-gold">
+                Chat with a Representative
+              </a>
+              <a href="/#estates" className="btn-outline-gold">
+                Explore Estates
+              </a>
             </div>
           </div>
         </section>

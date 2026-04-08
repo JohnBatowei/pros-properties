@@ -15,7 +15,7 @@ const pillars = [
   {
     icon: Shield,
     title: 'Access to Opportunities',
-    desc: 'Gain access to verified, premium property deals normally reserved for high net worth individuals.',
+    desc: 'Gain access to verified, premium property deals normally reserved for high-net-worth individuals.',
   },
   {
     icon: Lightbulb,
@@ -39,7 +39,7 @@ const HowWeHelpSection = () => {
             How We Help You <span className="text-gradient-gold">Succeed</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-            We empower everyday earners to build wealth through structured property investment just one step at a time.
+            We empower everyday earners to build wealth through structured property investment in just one step at a time.
           </p>
         </div>
 

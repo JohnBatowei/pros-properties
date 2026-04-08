@@ -3,36 +3,94 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Shield, TrendingUp, Clock, Users, CheckCircle, Home, MapPin, Banknote } from 'lucide-react';
+import { Shield, TrendingUp, Clock, Users, CheckCircle, Home, MapPin, Banknote, MessageCircle } from 'lucide-react';
+import { getWhatsAppLink } from '@/lib/emailjs';
+
 
 const investmentPlans = [
   {
     title: 'Starter Plan',
     price: '₦25,000',
     period: '/month',
-    description: 'Begin your real estate journey with affordable monthly contributions toward property ownership.',
+    description: 'Perfect for first-time investors looking to start their journey into real estate ownership with minimal commitment and steady growth.',
     features: [
-      'Monthly contribution of ₦25,000',
-      'Access to select estate locations',
-      'Flexible payment timeline',
-      'Full documentation & C of O',
-      'Quarterly progress reports',
+      '₦25,000 monthly contribution',
+      'Entry-level estate access',
+      'Flexible payment structure',
+      'Secure documentation process',
+      'Quarterly project updates',
     ],
     highlight: false,
   },
   {
-    title: 'Premium Plan',
+    title: 'Growth Plan',
     price: '₦50,000',
     period: '/month',
-    description: 'Accelerate your property acquisition with higher contributions and premium plot selections.',
+    description: 'Designed for individuals ready to grow faster with better property options and a more structured path to ownership.',
     features: [
-      'Monthly contribution of ₦50,000',
-      'Priority plot selection',
-      'Faster ownership timeline',
-      'Full documentation & C of O',
-      'Dedicated account manager',
+      '₦50,000 monthly contribution',
+      'Access to high-demand locations',
+      'Faster allocation timeline',
+      'Full legal documentation (C of O)',
+      'Priority customer support',
     ],
-    highlight: true,
+    highlight: true, // ⭐ keep this as most popular
+  },
+  {
+    title: 'Wealth Builder Plan',
+    price: '₦75,000',
+    period: '/month',
+    description: 'For serious investors focused on building long-term wealth through strategic property acquisition and appreciation.',
+    features: [
+      '₦75,000 monthly contribution',
+      'Premium estate selection',
+      'Accelerated ownership process',
+      'Investment advisory support',
+      'Bi-annual performance reports',
+    ],
+    highlight: false,
+  },
+  {
+    title: 'Elite Investor Plan',
+    price: '₦100,000',
+    period: '/month',
+    description: 'An exclusive plan for high-level investors seeking premium opportunities, maximum returns, and priority access to top developments.',
+    features: [
+      '₦100,000 monthly contribution',
+      'Top-tier estate locations',
+      'Fast-track property allocation',
+      'Dedicated relationship manager',
+      'Early access to new projects',
+    ],
+    highlight: false,
+  },
+  {
+    title: 'Executive Plan',
+    price: '₦150,000',
+    period: '/month',
+    description: 'Tailored for executives and business owners aiming for rapid portfolio expansion and premium real estate positioning.',
+    features: [
+      '₦150,000 monthly contribution',
+      'Access to luxury developments',
+      'Multiple plot allocation options',
+      'Personal investment advisor',
+      'Priority documentation processing',
+    ],
+    highlight: false,
+  },
+  {
+    title: 'Legacy Plan',
+    price: '₦250,000',
+    period: '/month',
+    description: 'Built for legacy-driven investors who want to secure generational wealth through high-value real estate assets.',
+    features: [
+      '₦250,000 monthly contribution',
+      'Ultra-premium property access',
+      'Bulk land allocation opportunities',
+      'VIP client service experience',
+      'Early investor privileges',
+    ],
+    highlight: false,
   },
 ];
 
@@ -44,11 +102,7 @@ const securityFeatures = [
 ];
 
 const timelinePhases = [
-<<<<<<< HEAD
-  { year: 'Step 1', title: 'Choose Your Plan', desc: 'Select a contribution plan that fits your budget, starting from as low as ₦25,000/month.' },
-=======
   { year: 'Step 1', title: 'Choose Your Plan', desc: 'Select a contribution plan that fits your budget — starting from as low as ₦25,000/month.' },
->>>>>>> f657e7538ac4c85d88855a9412c8e3d9cc642fec
   { year: 'Step 2', title: 'Make Consistent Payments', desc: 'Contribute monthly toward your chosen property. Every payment brings you closer to ownership.' },
   { year: 'Step 3', title: 'Property Allocation', desc: 'Once your payments are complete, your plot is officially allocated with full legal documentation.' },
   { year: 'Step 4', title: 'Build or Hold', desc: 'Develop your property or hold it for appreciation. Either way, you own a tangible, valuable asset.' },
@@ -70,8 +124,8 @@ const ContributionPage = () => {
               Own Property for as Low as <span className="text-gradient-gold">₦25,000/month</span>
             </h1>
             <p className="text-primary-foreground/70 text-lg sm:text-xl mt-6 max-w-2xl mx-auto">
-              Secure prime real estate in Abuja through flexible monthly contributions. 
-              Start small, build big — your path to property ownership starts here.
+              Secure prime real estate in Nigeria through flexible monthly contributions. 
+              Start small, build big your path to property ownership starts here.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-10">
               <div className="flex items-center gap-2 text-primary-foreground/80">
@@ -103,13 +157,16 @@ const ContributionPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {investmentPlans.map((plan, i) => (
                 <div
-                  key={plan.title}
-                  className={`relative glass-card p-8 rounded-2xl transition-all duration-700 ${
-                    plan.highlight ? 'border-2 border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)]' : ''
-                  } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                  key={plan.title + i}
+                  className={`relative glass-card p-8 rounded-2xl transition-all duration-500
+                    transform hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-gold/20
+                    ${plan.highlight ? 'border-2 border-gold shadow-[0_0_40px_rgba(212,175,55,0.15)]' : ''}
+                    ${investmentPlans.length % 3 === 1 && i === investmentPlans.length - 1 ? 'lg:col-span-3 lg:max-w-md lg:mx-auto' : ''}
+                    ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+                  `}
                   style={{ transitionDelay: `${i * 150}ms` }}
                 >
                   {plan.highlight && (
@@ -117,12 +174,16 @@ const ContributionPage = () => {
                       Most Popular
                     </div>
                   )}
+
                   <h3 className="font-display text-xl font-bold text-foreground">{plan.title}</h3>
+
                   <div className="mt-4 flex items-baseline gap-1">
                     <span className="font-display text-4xl font-bold text-gold">{plan.price}</span>
                     <span className="text-muted-foreground text-sm">{plan.period}</span>
                   </div>
+
                   <p className="text-muted-foreground text-sm mt-3">{plan.description}</p>
+
                   <ul className="mt-6 space-y-3">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3 text-sm text-foreground">
@@ -131,15 +192,16 @@ const ContributionPage = () => {
                       </li>
                     ))}
                   </ul>
+
                   <a
-                    href="https://wa.me/2348000000000?text=I'm%20interested%20in%20the%20investment%20plan"
+                    href={getWhatsAppLink("Hello, I'm interested in starting a property investment plan")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-8 block w-full text-center py-3 rounded-xl font-semibold transition-all text-sm ${
-                      plan.highlight
+                    className={`mt-8 block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 text-sm
+                      ${plan.highlight
                         ? 'bg-gold text-foreground hover:brightness-110'
                         : 'border border-gold/50 text-gold hover:bg-gold/10'
-                    }`}
+                      }`}
                   >
                     Get Started
                   </a>
@@ -147,7 +209,38 @@ const ContributionPage = () => {
               ))}
             </div>
           </div>
+
+
+          <div className="mt-16 text-center max-w-2xl mx-auto">
+            <div className="glass-card p-8 rounded-2xl border border-gold/20">
+              <h3 className="font-display text-2xl font-bold text-foreground">
+                Need a Custom Investment Plan?
+              </h3>
+
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                The plans above are just a starting point. We offer a wide range of flexible
+                investment options tailored to your financial capacity and long-term goals.
+                Whether you're investing small or looking to acquire multiple properties,
+                we have a solution for you.
+              </p>
+
+              <p className="text-muted-foreground mt-3 text-sm">
+                Speak with our team today to explore more opportunities.
+              </p>
+
+              <a
+                href={getWhatsAppLink('Hello, I\'m interested in starting a property investment plan')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 bg-gold text-foreground px-6 py-3 rounded-xl font-semibold hover:brightness-110 transition-all"
+              >
+                <MessageCircle size={18} className='rounded-full bg-gold text-foreground' /> Contact Us on WhatsApp
+              </a>
+            </div>
+          </div>
         </section>
+
+        
 
         {/* Why Invest */}
         <section className="section-padding bg-surface">

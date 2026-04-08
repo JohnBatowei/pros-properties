@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Target, Eye, Heart, Shield, Users, TrendingUp, Award, Building } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const values = [
   { icon: Shield, title: 'Integrity', desc: 'Transparent dealings with every investor, every time.' },
@@ -37,7 +38,7 @@ const AboutPage = () => {
               About Pros-Properties
             </h1>
             <p className="text-primary-foreground/70 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
-              Nigeria's premier collective real estate investment platform — building wealth, transforming communities, and delivering consistent returns since 2018.
+              Nigeria's premier collective real estate investment platform building wealth, transforming communities, and delivering consistent returns.
             </p>
           </div>
         </section>
@@ -61,7 +62,7 @@ const AboutPage = () => {
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To become Africa's most trusted collective property investment brand — empowering 10,000+ families to own land, build homes, and secure financial independence through smart real estate.
+                  To become Africa's most trusted collective property investment brand empowering 10,000+ families to own land, build homes, and secure financial independence through smart real estate.
                 </p>
               </div>
             </div>
@@ -126,7 +127,7 @@ const AboutPage = () => {
               Join hundreds of Nigerians building wealth through smart property investment.
             </p>
             <Heart className="inline text-gold mr-2" size={18} />
-            <a href="/#contact" className="btn-gold text-lg !px-10 !py-4">Get Started Today</a>
+            <Link to="/contribution" className="btn-gold text-lg !px-10 !py-4">Get Started Today</Link>
           </div>
         </section>
       </main>

@@ -16,7 +16,7 @@ const EstatesSection = () => {
             Estates You Can <span className="text-gradient-gold">Invest In</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">
-            Carefully selected locations with high growth potential across Abuja's most promising corridors.
+            Carefully selected locations with high growth potential across Nigeria.
           </p>
         </div>
 

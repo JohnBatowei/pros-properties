@@ -40,7 +40,7 @@ const TeamPage = () => {
               Meet Our <span className="text-gradient-gold">Team</span>
             </h1>
             <p className="text-primary-foreground/70 text-lg sm:text-xl mt-6 max-w-2xl mx-auto">
-              The experienced professionals behind your investment success — committed to transparency, 
+              The experienced professionals behind your investment success are committed to transparency, 
               integrity, and long-term wealth creation.
             </p>
           </div>
@@ -83,7 +83,7 @@ const TeamPage = () => {
                 <h3 className="font-display text-xl font-bold text-foreground">Legal Counsel</h3>
                 <p className="text-muted-foreground mt-2 leading-relaxed">
                   Our dedicated legal team oversees all title verification, investor protection agreements, 
-                  and regulatory compliance — ensuring every transaction is legally sound and every investor is protected.
+                  and regulatory compliance to ensuring every transaction is legally sound and every investor is protected.
                 </p>
               </div>
             </div>

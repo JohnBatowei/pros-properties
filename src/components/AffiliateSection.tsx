@@ -38,8 +38,8 @@ const AffiliateSection = () => {
             </h2>
             <p className="text-primary-foreground/70 text-lg mt-6 leading-relaxed">
               Join our collective wealth creation movement. Earn attractive commissions by 
-              referring investors to Pros Properties. Help everyday income earners bridge the gap 
-              to sustainable wealth — no capital needed, just your network and influence.
+              referring investors to Pros-Properties. Help everyday income earners bridge the gap 
+              to sustainable wealth, no capital needed, just your network and influence.
             </p>
             <div className="mt-8 flex items-center gap-4">
               <UserPlus size={24} className="text-gold" />
