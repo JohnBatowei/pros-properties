@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-5">
                 <img src={logo} alt="Pros-Properties" className="h-11 w-11" />
-                <span className="font-display font-bold text-lg text-primary-foreground">PROS-PROPERTIES</span>
+                <span className="font-display font-bold text-lg text-primary-foreground">PROS-PROPERTIES LTD</span>
               </div>
               <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
                 Nigeria's premier structured property investment platform. Building wealth through collective investment and verified real estate partnerships.

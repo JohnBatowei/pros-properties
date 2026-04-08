@@ -49,7 +49,7 @@ const FoundationPage = () => {
               <p className="text-muted-foreground text-lg mt-4 leading-relaxed">
                 Pros-Properties Limited was founded on the belief that property ownership and wealth creation 
                 should not be exclusive to the privileged few. Through our structured investment model, we empower 
-                ordinary Nigerians to build extraordinary wealth at one disciplined contribution at a time.
+                Africans to build extraordinary wealth at one disciplined contribution at a time.
               </p>
             </div>
 

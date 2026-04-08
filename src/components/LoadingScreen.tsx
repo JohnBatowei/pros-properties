@@ -39,7 +39,7 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.5 }}
       >
-        PROS-<span className="text-gradient-gold">PROPERTIES</span>
+        PROS-<span className="text-gradient-gold">PROPERTIES LTD</span>
       </motion.h1>
       <motion.p
         className="text-primary-foreground/50 text-sm mt-2 tracking-widest uppercase"

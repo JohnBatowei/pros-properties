@@ -68,7 +68,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Pros Properties Limited" className="h-12 w-12" />
           <div className="hidden sm:block">
-            <span className={`font-display font-bold text-lg leading-tight ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>PROS-PROPERTIES</span>
+            <span className={`font-display font-bold text-lg leading-tight ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>PROS-PROPERTIES LTD</span>
           </div>
         </Link>
 

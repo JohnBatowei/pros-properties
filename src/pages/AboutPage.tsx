@@ -38,7 +38,7 @@ const AboutPage = () => {
               About Pros-Properties
             </h1>
             <p className="text-primary-foreground/70 max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
-              Nigeria's premier collective real estate investment platform building wealth, transforming communities, and delivering consistent returns.
+Pros-Properties Limited is a real estate syndication platform that enables individuals to invest in property through small, consistent contributions within structured cohorts, making land ownership simple, transparent, and achievable, built on consistency, trust, and proper documentation.
             </p>
           </div>
         </section>
@@ -53,7 +53,7 @@ const AboutPage = () => {
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To democratize real estate investment in Nigeria by making premium land and property accessible to everyday Nigerians through a transparent, collective investment model that guarantees returns and builds generational wealth.
+                  To bridge the wealth gap for average income earners by providing accessible, structured property investment opportunities typically reserved for the top 1%, enabling sustainable wealth creation through small, consistent contributions and strategic property banking, all while protecting investors' funds via strong governance and legal compliance to maximize long-term returns and promote financial stability and shared prosperity
                 </p>
               </div>
               <div className="glass-card p-10">
@@ -62,7 +62,7 @@ const AboutPage = () => {
                 </div>
                 <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  To become Africa's most trusted collective property investment brand empowering 10,000+ families to own land, build homes, and secure financial independence through smart real estate.
+                  To become Africa's most trusted collective property investment brand empowering 10,000+ families to own properties, build homes, secure financial independence and build lasting wealth through disciplined, collective, and professionally managed property ownership, while raising financially prosperous individuals across the globe
                 </p>
               </div>
             </div>
@@ -91,7 +91,7 @@ const AboutPage = () => {
         </section>
 
         {/* Timeline */}
-        <section className="section-padding bg-surface" ref={timelineRef}>
+        {/* <section className="section-padding bg-surface" ref={timelineRef}>
           <div className="container-max">
             <div className={`text-center mb-14 transition-all duration-700 ${timelineVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our Journey</span>
@@ -114,7 +114,7 @@ const AboutPage = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="section-padding hero-gradient text-center">

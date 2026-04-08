@@ -21,9 +21,9 @@ const Index = () => {
       <HeroSection />
       <PartnersSlider />
       <HowItWorksSection />
-      <ProjectsSection />
-      <VideoSection />
       <ContributionPlans />
+      <VideoSection />
+      <ProjectsSection />
       <InvestmentModelSection />
       <HowWeHelpSection />
       <StartInvestmentSection />
