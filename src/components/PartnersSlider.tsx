@@ -7,12 +7,17 @@ import log3 from '@/assets/log3.jpg';
 import log4 from '@/assets/log4.jpg';
 import log5 from '@/assets/log5.jpg';
 import log6 from '@/assets/log6.jpg';
+import log8 from '@/assets/log8.jpg';
 
 
 const partners = [
   {
     name: "Brains & Hammers",
     logo: log1,
+  },
+  {
+    name: "PROMISELAND",
+    logo: log8,
   },
   {
     name: "Cappa & D'Alberto",
