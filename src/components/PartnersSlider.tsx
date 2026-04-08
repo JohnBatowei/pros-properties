@@ -1,30 +1,38 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Sparkles } from "lucide-react";
+import julius from '@/assets/julius.jpg';
+import log1 from '@/assets/log2.jpg';
+import log7 from '@/assets/log7.jpg';
+import log3 from '@/assets/log3.jpg';
+import log4 from '@/assets/log4.jpg';
+import log5 from '@/assets/log5.jpg';
+import log6 from '@/assets/log6.jpg';
+
 
 const partners = [
   {
     name: "Brains & Hammers",
-    logo: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
+    logo: log1,
   },
   {
     name: "Cappa & D'Alberto",
-    logo: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    logo: log3,
   },
   {
     name: "Julius Berger",
-    logo: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+    logo: julius,
   },
   {
     name: "UPDC",
-    logo: "https://images.unsplash.com/photo-1582407947304-fd86f028f716",
+    logo: log4,
   },
   {
     name: "Revolution Plus",
-    logo: "https://images.unsplash.com/photo-1599423300746-b62533397364",
+    logo: log5,
   },
   {
     name: "Landwey",
-    logo: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
+    logo: log6,
   },
 ];
 
