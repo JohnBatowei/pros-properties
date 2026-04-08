@@ -65,12 +65,14 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-background/90 backdrop-blur-xl shadow-lg border-b border-border/50' : 'bg-transparent'}`}>
       <div className="container-max flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20" ref={dropdownRef}>
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Pros Properties Limited" className="h-12 w-12" />
-          <div className="hidden sm:block">
-            <span className={`font-display font-bold text-lg leading-tight ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>PROS-PROPERTIES LTD</span>
-          </div>
-        </Link>
+      <Link to="/" className="flex items-center gap-2">
+  <img src={logo} alt="Pros Properties Limited" className="h-10 w-10 sm:h-12 sm:w-12" />
+  <div className="flex flex-col"> {/* Changed 'hidden sm:block' to 'flex' */}
+    <span className={`font-display font-bold text-sm sm:text-lg leading-tight ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+      PROS-PROPERTIES LTD
+    </span>
+  </div>
+</Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-5">
