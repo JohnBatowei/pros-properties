@@ -109,6 +109,8 @@ const Footer = () => {
                 <div className="flex items-start gap-2"><MapPin size={14} className="text-gold shrink-0 mt-1" /><p className="text-primary-foreground/60">Nigeria (Nationwide)</p></div>
                 <div className="flex items-start gap-2"><Mail size={14} className="text-gold shrink-0 mt-1" /><div className="text-primary-foreground/60 space-y-1"><p>invest@pros-properties.com</p><p>info@pros-properties.com</p><p>finance@pros-properties.com</p></div></div>
                 <div className="flex items-start gap-2"><Phone size={14} className="text-gold shrink-0 mt-1" /><p className="text-primary-foreground/60">+234 705 496 2230</p></div>
+                <div className="flex items-start gap-2"><Phone size={14} className="text-gold shrink-0 mt-1" /><p className="text-primary-foreground/60">+234 903 294 6232</p></div>
+                <div className="flex items-start gap-2"><Phone size={14} className="text-gold shrink-0 mt-1" /><p className="text-primary-foreground/60">+234 906 142 2256</p></div>
               </div>
               <div className="mt-6">
                 <h5 className="font-display font-bold text-primary-foreground mb-2 text-sm">Legal</h5>
