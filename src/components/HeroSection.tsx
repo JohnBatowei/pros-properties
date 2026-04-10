@@ -67,7 +67,7 @@ const HeroSection = () => {
             {[
               { value: '70+', label: 'Growing community nationwide', sub: '' },
               { value: '15+', label: 'Projects', sub: 'Through partner companies' },
-              { value: '₦15M+', label: 'Assets Managed', sub: 'And counting' },
+              { value: '₦15M+', label: 'Assets', sub: 'And counting' },
             ].map((stat) => (
               <div
                 key={stat.label}
