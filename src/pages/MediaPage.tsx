@@ -14,11 +14,11 @@ import heroImg from '@/assets/hero-estate.jpg';
 
 const allVideos = [
   { title: 'Estate Tour: Wumba Gardens', description: 'Take a virtual tour of our premium estate in Wumba, Abuja.', embedId: 'dQw4w9WgXcQ' },
-  { title: 'How Collective Investment Works', description: 'Learn how our investment model builds wealth over time.', embedId: 'dQw4w9WgXcQ' },
-  { title: 'Investor Success Stories', description: 'Hear from our investors who have achieved financial freedom.', embedId: 'dQw4w9WgXcQ' },
-  { title: 'Property Acquisition Process', description: 'See how we identify, evaluate, and acquire premium properties.', embedId: 'dQw4w9WgXcQ' },
-  { title: 'Kuje Estate Walkthrough', description: 'Walk through our completed Kuje Premium Gardens estate.', embedId: 'dQw4w9WgXcQ' },
-  { title: 'Why Real Estate in Abuja', description: 'Understand why Abuja remains Nigeria\'s hottest real estate market.', embedId: 'dQw4w9WgXcQ' },
+  // { title: 'How Collective Investment Works', description: 'Learn how our investment model builds wealth over time.', embedId: 'dQw4w9WgXcQ' },
+  // { title: 'Investor Success Stories', description: 'Hear from our investors who have achieved financial freedom.', embedId: 'dQw4w9WgXcQ' },
+  // { title: 'Property Acquisition Process', description: 'See how we identify, evaluate, and acquire premium properties.', embedId: 'dQw4w9WgXcQ' },
+  // { title: 'Kuje Estate Walkthrough', description: 'Walk through our completed Kuje Premium Gardens estate.', embedId: 'dQw4w9WgXcQ' },
+  // { title: 'Why Real Estate in Abuja', description: 'Understand why Abuja remains Nigeria\'s hottest real estate market.', embedId: 'dQw4w9WgXcQ' },
 ];
 
 const allImages = [

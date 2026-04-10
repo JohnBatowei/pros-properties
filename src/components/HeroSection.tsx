@@ -62,12 +62,12 @@ const HeroSection = () => {
           <div className="hidden lg:flex flex-col gap-6 animate-fade-up animate-fade-up-delay-4">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 mb-8 animate-fade-up backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-gold text-sm font-medium tracking-wide">Trusted by 500+ Investors Across Nigeria</span>
+              <span className="text-gold text-sm font-medium tracking-wide">Trusted by 100+ Investors Across Nigeria</span>
             </div>
             {[
-              { value: '500+', label: 'Active Investors', sub: 'Growing community nationwide' },
-              { value: '15+', label: 'Projects Delivered', sub: 'Through partner companies' },
-              { value: '₦2B+', label: 'Assets Managed', sub: 'And counting' },
+              { value: '70+', label: 'Growing community nationwide', sub: '' },
+              { value: '15+', label: 'Projects', sub: 'Through partner companies' },
+              { value: '₦15M+', label: 'Assets Managed', sub: 'And counting' },
             ].map((stat) => (
               <div
                 key={stat.label}
