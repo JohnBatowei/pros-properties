@@ -7,14 +7,14 @@ import project2 from '@/assets/project-2.jpg';
 
 const projects = [
   {
-    name: 'Kuje Premium Gardens Phase 1',
+    name: 'Kiyi Kuje Abuja Bamcom real estate',
     description: 'Delivered through our partner companies, fully developed with 100+ plots, paved roads, drainage, and electricity.',
     image: project1,
     highlights: ['100+ Plots Delivered', 'Full Infrastructure', '200% ROI Achieved'],
-    status: 'Completed',
+    status: 'Completed', 
   },
   {
-    name: 'Wumba Residential Phase 1',
+    name: 'Zuma grove Kaduna Beacon corporate realty',
     description: 'Successfully completed through partnered real estate developers. Modern homes with full documentation delivered to investors.',
     image: project2,
     highlights: ['50+ Houses Built', 'C of O Secured', 'All Investors Paid'],
@@ -53,7 +53,8 @@ const ProjectsSection = () => {
             <Sparkles size={16} /> Track Record
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-3">
-            Projects We've Delivered
+            {/* Projects We've Delivered */}
+            Projects 
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
             Delivered through our partnered real estate companies, every project represents trust, growth, and shared prosperity.

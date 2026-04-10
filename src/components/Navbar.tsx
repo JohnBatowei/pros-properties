@@ -5,10 +5,10 @@ import logo from '@/assets/logo.png';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'About Us', href: '/about' },
   { label: 'Contribution Plans', href: '/contribution' },
   { label: 'Opportunities', href: '/estates' },
+  { label: 'Become an Affiliate', href: '/affiliate' },
 ];
 
 const resourceLinks = [
@@ -16,7 +16,6 @@ const resourceLinks = [
   { label: 'Media', href: '/media' },
   { label: 'Foundation', href: '/foundation' },
   { label: 'Meet the Team', href: '/team' },
-  { label: 'Become an Affiliate', href: '/affiliate' },
 ];
 
 const Navbar = () => {
@@ -66,7 +65,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-background/90 backdrop-blur-xl shadow-lg border-b border-border/50' : 'bg-transparent'}`}>
       <div className="container-max flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20" ref={dropdownRef}>
       <Link to="/" className="flex items-center gap-2">
-  <img src={logo} alt="Pros Properties Limited" className="h-10 w-10 sm:h-12 sm:w-12" />
+  <img src={logo} alt="Pros Properties Limited" className="h-12 w-12 sm:h-12 sm:w-12" />
   <div className="flex flex-col"> {/* Changed 'hidden sm:block' to 'flex' */}
     <span className={`font-display font-bold text-sm sm:text-lg leading-tight ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
       PROS-PROPERTIES LTD

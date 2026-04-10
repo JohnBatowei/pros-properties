@@ -11,8 +11,8 @@ import estate1 from '@/assets/estate-1.jpg';
 import estate2 from '@/assets/estate-2.jpg';
 
 const allProjects = [
-  { name: 'Kuje Premium Gardens Phase 1', description: 'Fully developed with 100+ plots, paved roads, drainage, and electricity. All plots sold and titles delivered.', image: project1, highlights: ['100+ Plots Sold', 'Full Infrastructure', '200% ROI Achieved'] },
-  { name: 'Wumba Residential Phase 1', description: 'Successfully completed estate with modern homes and full documentation. A landmark achievement for our investors.', image: project2, highlights: ['50+ Houses Built', 'C of O Secured', 'All Investors Paid'] },
+  { name: 'Kiyi Kuje Abuja Bamcom real estate', description: 'Fully developed with 100+ plots, paved roads, drainage, and electricity. All plots sold and titles delivered.', image: project1, highlights: ['100+ Plots Sold', 'Full Infrastructure', '200% ROI Achieved'] },
+  { name: 'Zuma grove Kaduna Beacon corporate realty', description: 'Successfully completed estate with modern homes and full documentation. A landmark achievement for our investors.', image: project2, highlights: ['50+ Houses Built', 'C of O Secured', 'All Investors Paid'] },
   { name: 'Airport Road Commercial Phase 1', description: 'Commercial plots along Airport Road delivered with complete road network and utility connections.', image: estate1, highlights: ['30+ Plots Sold', 'Commercial Zone', '150% ROI'] },
   { name: 'Kuje Gardens Phase 2', description: 'Second phase delivery with enhanced infrastructure and green spaces for residents.', image: estate2, highlights: ['75+ Plots Sold', 'Green Infrastructure', 'All Titles Delivered'] },
 ];

@@ -8,37 +8,36 @@ import log4 from '@/assets/log4.jpg';
 import log5 from '@/assets/log5.jpg';
 import log6 from '@/assets/log6.jpg';
 import log8 from '@/assets/log8.jpg';
-
+import beacon from '@/assets/becon_realty_logo-removebg-preview.png';
 
 const partners = [
+
+  {
+    name: "Bamcom real estate",
+    logo: log7,
+  },
   {
     name: "Brains & Hammers",
     logo: log1,
   },
+    {
+    name: "Mshel",
+    logo: log3,
+  },
+  {
+    name: "Beacon Corporate Realty",
+    logo: beacon,
+  },
+  
   {
     name: "PROMISELAND",
     logo: log8,
   },
   {
-    name: "Cappa & D'Alberto",
-    logo: log3,
-  },
-  {
-    name: "Julius Berger",
-    logo: julius,
-  },
-  {
-    name: "UPDC",
+    name: "Bespoke",
     logo: log4,
   },
-  {
-    name: "Revolution Plus",
-    logo: log5,
-  },
-  {
-    name: "Landwey",
-    logo: log6,
-  },
+
 ];
 
 const PartnersSlider = () => {
