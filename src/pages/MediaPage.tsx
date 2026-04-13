@@ -11,14 +11,24 @@ import estate3 from '@/assets/estate-3.jpg';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import heroImg from '@/assets/hero-estate.jpg';
+import frontPageVid from '@/assets/frontPageVid.mp4'
+// import vid2 from '@/assets/frontPageVid2.mp4'
+import videoThumbnail from '@/assets/estate-1.jpg';
+
 
 const allVideos = [
-  { title: 'Estate Tour: Wumba Gardens', description: 'Take a virtual tour of our premium estate in Wumba, Abuja.', embedId: 'dQw4w9WgXcQ' },
-  // { title: 'How Collective Investment Works', description: 'Learn how our investment model builds wealth over time.', embedId: 'dQw4w9WgXcQ' },
-  // { title: 'Investor Success Stories', description: 'Hear from our investors who have achieved financial freedom.', embedId: 'dQw4w9WgXcQ' },
-  // { title: 'Property Acquisition Process', description: 'See how we identify, evaluate, and acquire premium properties.', embedId: 'dQw4w9WgXcQ' },
-  // { title: 'Kuje Estate Walkthrough', description: 'Walk through our completed Kuje Premium Gardens estate.', embedId: 'dQw4w9WgXcQ' },
-  // { title: 'Why Real Estate in Abuja', description: 'Understand why Abuja remains Nigeria\'s hottest real estate market.', embedId: 'dQw4w9WgXcQ' },
+  { 
+    title: 'About Pros-Properties LTD', 
+    description: 'See how our structured system helps you build wealth through property investment.', 
+    videoSrc: frontPageVid, // Local import
+    thumbnail: videoThumbnail 
+  },
+  // { 
+  //   title: 'How Collective Investment Works', 
+  //   description: 'Learn how our investment model builds wealth over time.', 
+  //   videoSrc: vid2, // Local import
+  //   thumbnail: estate2 // Using one of your estate images as a thumbnail
+  // },
 ];
 
 const allImages = [
@@ -54,26 +64,32 @@ const MediaPage = () => {
             <div className={`mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <h2 className="font-display text-3xl font-bold text-foreground mb-8">Videos</h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {allVideos.map((video, i) => (
-                  <div
-                    key={video.title}
-                    className="glass-card overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-1"
-                    onClick={() => setActiveVideo(video.embedId)}
-                  >
-                    <div className="relative aspect-video bg-navy overflow-hidden">
-                      <div className="absolute inset-0 bg-secondary/60 flex items-center justify-center group-hover:bg-secondary/40 transition-colors">
-                        <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
-                          <Play size={24} className="text-foreground ml-1" fill="currentColor" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-display text-lg font-bold text-foreground">{video.title}</h3>
-                      <p className="text-muted-foreground mt-1 text-sm">{video.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+  {allVideos.map((video, i) => (
+    <div
+      key={video.title}
+      className="glass-card overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-1"
+      onClick={() => setActiveVideo(video.videoSrc)} // Pass the source instead of an ID
+    >
+      <div className="relative aspect-video bg-navy overflow-hidden">
+        {/* Card Thumbnail */}
+        <img 
+          src={video.thumbnail} 
+          alt={video.title} 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+        />
+        <div className="absolute inset-0 bg-secondary/60 flex items-center justify-center group-hover:bg-secondary/40 transition-colors">
+          <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
+            <Play size={24} className="text-foreground ml-1" fill="currentColor" />
+          </div>
+        </div>
+      </div>
+      <div className="p-5">
+        <h3 className="font-display text-lg font-bold text-foreground">{video.title}</h3>
+        <p className="text-muted-foreground mt-1 text-sm">{video.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
             </div>
 
             {/* Gallery */}
@@ -95,15 +111,33 @@ const MediaPage = () => {
           </div>
         </section>
 
-        {/* Video Modal */}
-        {activeVideo && (
-          <div className="fixed inset-0 z-[100] bg-secondary/90 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setActiveVideo(null)}>
-            <div className="relative w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
-              <button onClick={() => setActiveVideo(null)} className="absolute -top-12 right-0 text-primary-foreground hover:text-gold"><X size={32} /></button>
-              <iframe src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`} className="w-full h-full rounded-2xl" allowFullScreen allow="autoplay" title="Video player" />
-            </div>
-          </div>
-        )}
+
+       {/* Video Modal */}
+{activeVideo && (
+  <div 
+    className="fixed inset-0 z-[100] bg-secondary/90 backdrop-blur-sm flex items-center justify-center p-4" 
+    onClick={() => setActiveVideo(null)}
+  >
+    <div className="relative w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
+      <button 
+        onClick={() => setActiveVideo(null)} 
+        className="absolute -top-12 right-0 text-primary-foreground hover:text-gold"
+      >
+        <X size={32} />
+      </button>
+
+      <video 
+        src={activeVideo} 
+        className="w-full h-full rounded-2xl shadow-2xl bg-black"
+        controls 
+        autoPlay 
+        playsInline
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+)}
 
         {/* Image Lightbox */}
         {lightbox !== null && (

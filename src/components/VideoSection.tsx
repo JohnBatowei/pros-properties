@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Play, X, Sparkles, ShieldCheck, Users, BarChart3 } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import frontPageVid from '@/assets/frontPageVid.mp4'
+import videoThumbnail from '@/assets/estate-1.jpg';
+
 
 const VideoSection = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -38,6 +41,8 @@ const VideoSection = () => {
               className="relative aspect-video max-w-4xl mx-auto rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-border/30"
               onClick={() => setActiveVideo('dQw4w9WgXcQ')}
             >
+            <img src={videoThumbnail} alt="Investment Opportunity Thumbnail" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
               <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent z-10" />
               <div className="absolute inset-0 bg-secondary/50 flex items-center justify-center z-20 group-hover:bg-secondary/40 transition-colors">
                 <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_40px_rgba(212,175,55,0.4)]">
@@ -69,20 +74,33 @@ const VideoSection = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
+    
+   {/* Video Modal */}
       {activeVideo && (
-        <div className="fixed inset-0 z-[100] bg-secondary/95 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setActiveVideo(null)}>
+        <div 
+          className="fixed inset-0 z-[100] bg-secondary/95 backdrop-blur-sm flex items-center justify-center p-4" 
+          onClick={() => setActiveVideo(null)}
+        >
           <div className="relative w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setActiveVideo(null)} className="absolute -top-12 right-0 text-primary-foreground hover:text-gold transition-colors">
+            <button 
+              onClick={() => setActiveVideo(null)} 
+              className="absolute -top-12 right-0 text-primary-foreground hover:text-gold transition-colors"
+            >
               <X size={32} />
             </button>
-            <iframe
-              src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-              className="w-full h-full rounded-2xl shadow-2xl"
-              allowFullScreen
-              allow="autoplay"
-              title="Video player"
-            />
+            
+            {/* Local Video Implementation with Thumbnail (Poster) */}
+            <video 
+              src={frontPageVid} 
+              // --- NEW ATTRIBUTE ---
+              // poster={videoThumbnail} 
+              className="w-full h-full rounded-2xl shadow-2xl bg-black"
+              controls 
+              autoPlay
+              playsInline
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       )}
