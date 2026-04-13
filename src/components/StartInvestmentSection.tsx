@@ -9,6 +9,24 @@ const StartInvestmentSection = () => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '', plan: '' });
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!form.name || !form.phone || !form.email) {
+  //     toast.error('Please fill in all required fields');
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   try {
+  //     await sendInspectionForm(form);
+  //     toast.success('Your information has been submitted! Our team will reach out shortly.');
+  //     setForm({ name: '', phone: '', email: '', plan: '' });
+  //   } catch {
+  //     toast.error('Submission failed. Please try WhatsApp instead.');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone || !form.email) {
@@ -16,8 +34,18 @@ const StartInvestmentSection = () => {
       return;
     }
     setLoading(true);
+
     try {
-      await sendInspectionForm(form);
+      // 2. Netlify Fetch Call
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "investment-inquiry", // A distinct name for this specific form
+          ...form 
+        }).toString(),
+      });
+
       toast.success('Your information has been submitted! Our team will reach out shortly.');
       setForm({ name: '', phone: '', email: '', plan: '' });
     } catch {
@@ -26,7 +54,6 @@ const StartInvestmentSection = () => {
       setLoading(false);
     }
   };
-
   const benefits = [
     'No large upfront capital needed',
     'Join a verified investment group',
@@ -81,7 +108,8 @@ const StartInvestmentSection = () => {
             <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 to-gold/5 rounded-[28px] blur-sm" />
-                <form onSubmit={handleSubmit} className="relative bg-primary-foreground/5 backdrop-blur-xl rounded-3xl p-8 border border-primary-foreground/10">
+                <form onSubmit={handleSubmit} className="relative bg-primary-foreground/5 backdrop-blur-xl rounded-3xl p-8 border border-primary-foreground/10" data-netlify="true" 
+                  data-netlify-honeypot="bot-field">
                   <h3 className="font-display text-xl font-bold text-primary-foreground mb-6">Let's Talk About Your Investment</h3>
                   <div className="space-y-4">
                     {[
