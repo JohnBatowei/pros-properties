@@ -15,19 +15,21 @@ import project2 from '@/assets/project-2.jpg';
 import heroImg from '@/assets/hero-estate.jpg';
 import videoThumbnail from '@/assets/estate-1.jpg';
 
+
+
 const allVideos = [
   { 
-    title: 'About Pros-Properties LTD', 
-    description: 'See how our structured system helps you build wealth through property investment.', 
-    youtubeId: 'sySL_WzA4Xw', // Your YouTube Short ID
+    title: 'How Pros-Properties LTD Investment Works', 
+    description: 'Learn about our unique investment model and how we help you build wealth through property investment.', 
+    youtubeId: 'sySL_WzA4Xw', 
     thumbnail: videoThumbnail 
   },
-  // { 
-  //   title: 'How Collective Investment Works', 
-  //   description: 'Learn how our investment model builds wealth over time.', 
-  //   youtubeId: 'dQw4w9WgXcQ', // Example ID (Update with your second video ID)
-  //   thumbnail: estate2 
-  // },
+  { 
+    title: 'About Pros-Properties LTD', 
+    description: 'Discover our mission, vision, and the team behind our commitment to making property investment accessible and rewarding for Nigerians.', 
+    youtubeId: '3tmzAEbg_mw', // Example ID (Update with your second video ID)
+    thumbnail: estate2 
+  },
 ];
 
 const allImages = [
