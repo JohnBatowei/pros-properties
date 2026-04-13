@@ -5,7 +5,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { UserPlus, Send, CheckCircle, TrendingUp, Users, Wallet, Star } from 'lucide-react';
-import { sendAffiliateForm, getWhatsAppLink } from '@/lib/emailjs';
+import { sendAffiliateForm, getWhatsAppLinkI } from '@/lib/emailjs';
 import { toast } from 'sonner';
 
 const benefits = [
@@ -130,7 +130,7 @@ const AffiliatePage = () => {
                   ))}
                 </div>
                 <a
-                  href={getWhatsAppLink("Hello, I'm interested in becoming an affiliate partner with Pros Properties.")}
+                  href={getWhatsAppLinkI("Hello, I'm interested in becoming an affiliate partner with Pros Properties.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-green-deep font-medium text-primary-foreground hover:scale-105 transition-transform border border-green-deep-light/30"

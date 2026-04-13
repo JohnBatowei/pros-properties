@@ -19,6 +19,9 @@ export const sendAffiliateForm = async (data: Record<string, string>) => {
 };
 
 export const WHATSAPP_NUMBER = '2347054962230';
+export const WHATSAPP_NUMBERF = '2349032946232';
+export const WHATSAPP_NUMBERI = '2349061422256';
+
 export const WHATSAPP_MESSAGE = `Hello, I'm interested in starting a property investment plan with Pros Properties! 🏠
 
 How can you help me today?
@@ -30,5 +33,14 @@ How can you help me today?
 
 Please select an option or type your message.`;
 
+
 export const getWhatsAppLink = (message?: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message || WHATSAPP_MESSAGE)}`;
+
+
+export const getWhatsAppLinkF = (message?: string) =>
+  `https://wa.me/${WHATSAPP_NUMBERF}?text=${encodeURIComponent(message || WHATSAPP_MESSAGE)}`;
+
+
+export const getWhatsAppLinkI = (message?: string) =>
+  `https://wa.me/${WHATSAPP_NUMBERF}?text=${encodeURIComponent(message || WHATSAPP_MESSAGE)}`;

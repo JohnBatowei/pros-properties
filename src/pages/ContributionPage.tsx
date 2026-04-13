@@ -4,7 +4,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Shield, TrendingUp, Clock, Users, CheckCircle, Home, MapPin, Banknote, MessageCircle } from 'lucide-react';
-import { getWhatsAppLink } from '@/lib/emailjs';
+import { getWhatsAppLinkF } from '@/lib/emailjs';
 
 
 const investmentPlans = [
@@ -194,7 +194,7 @@ const ContributionPage = () => {
                   </ul>
 
                   <a
-                    href={getWhatsAppLink("Hello, I'm interested in starting a property investment plan")}
+                    href={getWhatsAppLinkF("Hello, I'm interested in starting a property investment plan")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`mt-8 block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 text-sm
@@ -229,7 +229,7 @@ const ContributionPage = () => {
               </p>
 
               <a
-                href={getWhatsAppLink('Hello, I\'m interested in starting a property investment plan')}
+                href={getWhatsAppLinkF('Hello, I\'m interested in starting a property investment plan')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 bg-gold text-foreground px-6 py-3 rounded-xl font-semibold hover:brightness-110 transition-all"

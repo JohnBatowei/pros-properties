@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Rocket, MessageCircle, Send, CheckCircle } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { sendInspectionForm, getWhatsAppLink } from '@/lib/emailjs';
+import { sendInspectionForm, getWhatsAppLinkI } from '@/lib/emailjs';
 import { toast } from 'sonner';
 
 const StartInvestmentSection = () => {
@@ -95,7 +95,7 @@ const StartInvestmentSection = () => {
 
               <div className="mt-8">
                 <a
-                  href={getWhatsAppLink('Hello, I\'m interested in starting a property investment plan')}
+                  href={getWhatsAppLinkI('Hello, I\'m interested in starting a property investment plan')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#25D366] font-semibold text-primary-foreground transition-all hover:scale-105 shadow-lg"
