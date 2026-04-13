@@ -4,25 +4,29 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PageTransition from '@/components/PageTransition';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Linkedin, Mail, Shield } from 'lucide-react';
+import ceo from '@/assets/ceo.jpeg'
+import finance from '@/assets/finance.png'
+import invest from '@/assets/invest.jpeg'
+
 
 const teamMembers = [
   {
     name: 'Ogbaje Glory Onetokole',
-    image: '/images/ogbaje-glory.jpg',
+    image: ceo,
     role: 'Chief Executive Officer',
     bio: 'A visionary Chief Executive Officer with deep expertise in property development and investment strategy, supported by professional certifications and advanced training in property investment, portfolio management, and real estate finance. Pros-Properties Limited is established with a clear mission to make property ownership accessible, secure, and rewarding for everyday Nigerians. With a strong track record of delivering high-value residential estates. Her leadership is defined by strategic foresight, disciplined execution, and a commitment to transparency, innovation, and industry best practices. Under her direction, the company continues to scale sustainably, positioning itself as a trusted and forward-thinking force in the Nigerian investment sector.',
     specialties: ['Strategic Planning', 'Estate Development', 'Investor Relations'],
   },
   {
     name: 'Olawale Ogunsola Oluwakayode',
-    image: '/images/olawale-ogunsola.jpg',
+    image: finance,
     role: 'Chief Financial Officer',
     bio: 'A highly qualified finance professional and Member of the Institute of Chartered Accountants of Nigeria (ICAN) and the Chartered Institute of Taxation of Nigeria (CITN), with strong expertise in financial strategy and fund management. An experienced financial strategist with a proven track record in the transparent and efficient management of investment portfolios. He plays a key role in shaping organizational direction, driving financial growth, and ensuring sustainable business practices. Demonstrates exceptional capability in maintaining rigorous financial oversight, delivering bi-annual investor reports, and ensuring full regulatory compliance. Recognized for a disciplined and detail-oriented approach to fund management, contributing significantly to sustained investor confidence and the consistent delivery of strong returns.',
     specialties: ['Financial Management', 'Regulatory Compliance', 'Fund Allocation'],
   },
   {
     name: 'Blessing Enemona Ogbaje',
-    image: '/images/blessing-enemona.jpg',
+    image: invest,
     role: 'Chief Investment Officer',
     bio: 'Blessing is a seasoned investment professional and real estate expert with a proven track record in property acquisition and sales across Nigeria, serving both local investors and Nigerians in the diaspora. She specializes in identifying high-growth opportunities, particularly within Nigeria, using data-driven insights and strategic market analysis. With strong expertise in property investment, client advisory, and market trends, Blessing consistently delivers assets that generate sustainable returns. She also holds relevant certifications and has undergone professional training in real estate investment and property management. Her results-driven approach has played a key role in driving the company’s growth and strengthening its reputation in the property market.',
     specialties: ['Portfolio Strategy', 'Market Analysis', 'Property Acquisition'],
@@ -75,7 +79,7 @@ const TeamPage = () => {
         ) : null}
 
         {/* Professional Fallback / Initials Branding Layer */}
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-800 to-black z-0">
+        {/* <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-800 to-black z-0">
           <div className="text-center">
             <div className="w-24 h-24 rounded-full border-2 border-gold/30 flex items-center justify-center mb-2 mx-auto">
                <span className="font-display text-4xl font-bold text-gold/50">
@@ -84,7 +88,7 @@ const TeamPage = () => {
             </div>
             <p className="text-[10px] text-gold/40 tracking-[0.3em] uppercase">Pros-Properties</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Small Floating Identity Badge (Visible over image) */}
         <div className="absolute top-6 left-6 h-12 w-12 rounded-xl bg-background/80 backdrop-blur-md border border-gold/40 flex items-center justify-center shadow-2xl z-20">

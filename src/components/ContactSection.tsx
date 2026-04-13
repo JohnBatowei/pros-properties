@@ -1,13 +1,31 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { sendContactForm } from '@/lib/emailjs';
+// import { sendContactForm } from '@/lib/emailjs';
 import { toast } from 'sonner';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!form.name || !form.email || !form.message) {
+  //     toast.error('Please fill in required fields');
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   try {
+  //     await sendContactForm(form);
+  //     toast.success('Message sent! We will get back to you shortly.');
+  //     setForm({ name: '', email: '', phone: '', message: '' });
+  //   } catch {
+  //     toast.error('Failed to send. Please try again or contact us via WhatsApp.');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,17 +34,26 @@ const ContactSection = () => {
       return;
     }
     setLoading(true);
+
     try {
-      await sendContactForm(form);
+      // Netlify listens for POST requests to the root path
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact", // This must match the name on your form tag
+          ...form 
+        }).toString(),
+      });
+
       toast.success('Message sent! We will get back to you shortly.');
       setForm({ name: '', email: '', phone: '', message: '' });
     } catch {
-      toast.error('Failed to send. Please try again or contact us via WhatsApp.');
+      toast.error('Failed to send. Please try again.');
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <section id="contact" className="section-padding" ref={ref}>
       <div className="container-max">
@@ -37,7 +64,8 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-16">
           <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5" data-netlify="true" 
+              data-netlify-honeypot="bot-field" >
               {[
                 { label: 'Full Name *', key: 'name', type: 'text', placeholder: 'Your name' },
                 { label: 'Email Address *', key: 'email', type: 'email', placeholder: 'you@email.com' },
