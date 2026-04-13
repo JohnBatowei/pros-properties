@@ -9,15 +9,42 @@ const AffiliateSection = () => {
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (!form.name || !form.phone || !form.email) {
+  //     toast.error('Please fill in all fields');
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   try {
+  //     await sendAffiliateForm(form);
+  //     toast.success('Application submitted! We will reach out shortly.');
+  //     setForm({ name: '', phone: '', email: '' });
+  //   } catch {
+  //     toast.error('Submission failed. Please try again.');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone || !form.email) {
       toast.error('Please fill in all fields');
       return;
     }
     setLoading(true);
+
     try {
-      await sendAffiliateForm(form);
+      // Netlify AJAX submission
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "affiliate-application",
+          ...form 
+        }).toString(),
+      });
+
       toast.success('Application submitted! We will reach out shortly.');
       setForm({ name: '', phone: '', email: '' });
     } catch {
@@ -25,8 +52,7 @@ const AffiliateSection = () => {
     } finally {
       setLoading(false);
     }
-  };
-
+  }; 
   return (
     <section className="section-padding hero-gradient" ref={ref}>
       <div className="container-max">
@@ -48,7 +74,8 @@ const AffiliateSection = () => {
           </div>
 
           <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <form onSubmit={handleSubmit} className="bg-background/10 backdrop-blur-xl rounded-3xl p-8 border border-primary-foreground/10">
+            <form onSubmit={handleSubmit} className="bg-background/10 backdrop-blur-xl rounded-3xl p-8 border border-primary-foreground/10" data-netlify="true"
+              data-netlify-honeypot="bot-field">
               <h3 className="font-display text-xl font-bold text-primary-foreground mb-6">Become an Affiliate</h3>
               <div className="space-y-5">
                 {[
