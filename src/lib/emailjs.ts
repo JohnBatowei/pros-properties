@@ -18,9 +18,9 @@ export const sendAffiliateForm = async (data: Record<string, string>) => {
   return emailjs.send(SERVICE_ID, TEMPLATE_ID_AFFILIATE, data, PUBLIC_KEY);
 };
 
-export const WHATSAPP_NUMBER = '2347054962230';
-export const WHATSAPP_NUMBERF = '2349032946232';
-export const WHATSAPP_NUMBERI = '2349061422256';
+export const WHATSAPP_NUMBER = '2349160169144';
+export const WHATSAPP_NUMBERF = '2349160169144';
+export const WHATSAPP_NUMBERI = '2349160169144';
 
 export const WHATSAPP_MESSAGE = `Hello, I'm interested in starting a property investment plan with Pros Properties! 🏠
 
